@@ -22,7 +22,8 @@ Kullanıcılar, AI yanıtlarını manuel olarak değerlendirebilir, doğruluk pu
 
 ## 🚀 Canlı Demo
 
-> [📎 Tıkla ve dene](https://makalin.github.io/HalTest)
+> [📎 Boş form](https://makalin.github.io/HalTest)
+> [📎 Karşılaştırmalı form](https://makalin.github.io/HalTest/test.html)
 
 ---
 
