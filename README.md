@@ -5,6 +5,7 @@ Kullanıcılar, AI yanıtlarını manuel olarak değerlendirebilir, doğruluk pu
 
 - 🔗 [Soru Havuzu (sorular.md)](./sorular.md) — Halüsinasyon test cümleleri listesi  
 - 🔗 [Örnek Değerlendirme Tablosu (ornek.md)](./ornek.md) — Puanlama ve analiz örneği
+- 🔗 [Örnek Karşılaştırma Tablosu (analiz.md)](./analiz.md) — Karşılaştırmalı analiz örneği
 
 ---
 
