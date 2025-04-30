@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>HalTest - AI Halüsinasyon Testi</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #111; color: #eee; }
+    h1 { color: #64ffda; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #444; padding: 8px; }
+    th { background: #222; }
+    input, select, textarea { width: 100%; padding: 6px; margin: 2px 0; background: #222; color: #fff; border: 1px solid #444; }
+    button { margin-top: 10px; padding: 10px; background: #64ffda; border: none; cursor: pointer; color: #000; }
+    button:hover { background: #52cbbd; }
+  </style>
+</head>
+<body>
+  <h1>🤖 HalTest - AI Halüsinasyon Testi</h1>
+
+  <table id="testTable">
+    <thead>
+      <tr>
+        <th>Soru</th>
+        <th>AI Yanıtı</th>
+        <th>Doğruluk (0-3)</th>
+        <th>Halüsinasyon Var mı?</th>
+        <th>Notlar</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+  </table>
+
+  <button onclick="addRow()">+ Yeni Satır Ekle</button>
+  <button onclick="calculate()">✅ Skorları Hesapla</button>
+
+  <h2 id="averageResult"></h2>
+
+  <script>
+    function addRow() {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td><textarea></textarea></td>
+        <td><textarea></textarea></td>
+        <td>
+          <select>
+            <option value="0">0 - Yanlış</option>
+            <option value="1">1 - Yarı doğru</option>
+            <option value="2">2 - Eksik</option>
+            <option value="3">3 - Doğru</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            <option value="Evet">Evet</option>
+            <option value="Hayır">Hayır</option>
+          </select>
+        </td>
+        <td><textarea></textarea></td>
+      `;
+      document.getElementById("tableBody").appendChild(row);
+    }
+
+    function calculate() {
+      const selects = document.querySelectorAll("#testTable tbody select:nth-child(1)");
+      let total = 0;
+      let count = 0;
+      selects.forEach(s => {
+        total += parseInt(s.value);
+        count++;
+      });
+      const avg = (count > 0) ? (total / count).toFixed(2) : 0;
+      document.getElementById("averageResult").innerText = `🔍 Ortalama Doğruluk Puanı: ${avg} / 3`;
+    }
+
+    // İlk satırı otomatik ekle
+    addRow();
+  </script>
+</body>
+</html>
