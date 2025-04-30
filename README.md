@@ -3,7 +3,8 @@
 **HalTest**, yapay zeka modellerinin halüsinasyon (uydurma bilgi) üretme eğilimlerini test etmek amacıyla geliştirilmiş açık kaynaklı bir web aracıdır.  
 Kullanıcılar, AI yanıtlarını manuel olarak değerlendirebilir, doğruluk puanları verebilir ve modelin tutarlılığını analiz edebilir.
 
-🔗 [Soru Havuzu](./sorular.md) – Halüsinasyon test cümleleri listesi
+- 🔗 [Soru Havuzu (sorular.md)](./sorular.md) — Halüsinasyon test cümleleri listesi  
+- 🔗 [Örnek Değerlendirme Tablosu (ornek.md)](./ornek.md) — Puanlama ve analiz örneği
 
 ---
 
